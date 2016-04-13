@@ -30,4 +30,4 @@ def find_path(graph, start, end, path=[]):
 
     return paths        
 
-print find_path(graph, 'A', 'D')    
+print find_path(graph, 'A', 'A')    
