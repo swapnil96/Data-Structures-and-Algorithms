@@ -8,7 +8,6 @@ graph = {'A': ['B', 'C'],
 def find_path(graph, start, end, path=[]):
     
     path = path + [start]
-    print path
 
     if start == end:
         return [path]
@@ -19,8 +18,6 @@ def find_path(graph, start, end, path=[]):
     paths = []
 
     for node in graph[start]:
-            
-        print node
         if node not in path:
     
             newpaths = find_path(graph, node, end, path)
@@ -30,4 +27,4 @@ def find_path(graph, start, end, path=[]):
 
     return paths        
 
-print find_path(graph, 'A', 'A')    
+print find_path(graph, 'A', 'D')    
