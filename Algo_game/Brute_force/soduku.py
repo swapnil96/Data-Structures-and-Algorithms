@@ -95,12 +95,12 @@ def solve(que):
 que = [0]*9
 for i in xrange(9):
 	a = raw_input()
-	b = map(int, a.split())
-	que[i] = b
+	b = ''.join(map(str, a.split()))
+	que[i] = map(int, b)
 now = time.time()
 if solve(que) == True:
+	after = time.time()
 	Print(que)
 else:
 	print "Wrong Input"
-after = time.time()
 print 'Time elapsed -', after - now

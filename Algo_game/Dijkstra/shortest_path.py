@@ -41,13 +41,23 @@ def solution(s, v, dist, pred):
 	return 'length = ' + str(total) + ', path = ' + str(path)
 	
 if __name__ == '__main__':
+	'''
 	graph = { 0: {1: 6, 2: 8, 3: 18},
 			  1: {4: 11},
 			  2: {3: 9},
 			  3: {},
 			  4: {5: 3},
 			  5: {3: 4, 2: 7}}
-
-	dist, pred = singleSourceShortestPath(graph, 0)
+	'''		  
+	graph = { 0: {},
+			  1: {0: 5},
+			  2: {0: 2},
+			  3: {2: 4, 0: 4},
+			  4: {2: 10, 0: 10},
+			  5: {2: 20},
+			  6: {5: 1, 2: 3}
+			  }
+		  
+	dist, pred = singleSourceShortestPath(graph, 4)
 	print dist, pred
-	print solution(0, 5, dist, pred)		  							
+	print solution(4, 0, dist, pred)		  							

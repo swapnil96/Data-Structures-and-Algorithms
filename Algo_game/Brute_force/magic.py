@@ -99,19 +99,33 @@ def solveit(n, step = 0):
 
 	return False
 	
+import time	
 
 initialize(3)
-print used
+#print used
 print magicsum
 output()
+now = time.time()
 solve(3)
+print time.time() - now
 output()
-print used	
+#print used	
 
 initialize(4)
-print used
+#print used
 print magicsum
 output()
+then = time.time()
 solveit(4)
+print time.time() - then
 output()
-print used	
+#print used	
+
+initialize(5)
+#print used
+print magicsum
+output()
+fut = time.time()
+solveit(5)
+print time.time() - fut
+output()

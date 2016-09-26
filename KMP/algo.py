@@ -59,4 +59,3 @@ txt = raw_input()
 pat = raw_input()
 KMPSearch(pat, txt)
 
-# This code is contributed by Bhavya Jain
