@@ -97,14 +97,18 @@ class DepthFirstTraversal:
 		return path				
 
 if __name__ == '__main__':
-	simple = {1 : [2, 3, 5], 
-		      2 : [1, 4],
-		      3 : [1], 
-		      4 : [2, 5], 
-		      5 : [1, 4]}
+	simple = {1 : [2, 8, 6, 5], 
+		      2 : [1, 3],
+		      3 : [2, 4], 
+		      4 : [3, 5], 
+		      5 : [1, 4],
+		      6 : [1, 7],
+		      7 : [8, 6],
+		      8 : [1, 7]}
 
 	g = loadgraph(simple)
-	print g.edges
-	print g.isedge(1, 2)
-	dfs = DepthFirstTraversal(g, 3)
-	print dfs.Solution(5)
+	# print g.edges
+	# print g.isedge(1, 2)
+	dfs = DepthFirstTraversal(g, 1)
+	print dfs.pred
+	print dfs.Solution(1)

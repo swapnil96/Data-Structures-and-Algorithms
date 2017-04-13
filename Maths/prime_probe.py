@@ -1,6 +1,6 @@
 '''Fermat's probability probe for checking a number is prime, doesn't gurantee to be prime but catches any non-prime number quite easily'''
 
-import random 
+import random
 
 largePrime = 622288097498926496141095869268883999563096063592498055290461
 
@@ -15,4 +15,4 @@ def isPrime(n, k = 5):
 
 	return True
 
-print isPrime(largePrime)	
+print isPrime(largePrime)
