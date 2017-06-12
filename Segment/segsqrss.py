@@ -21,6 +21,7 @@ class segmentTree:
 			self.build(start, mid, main, 2*node + 1)
 			self.build(mid + 1, end, main, 2*node + 2)
 			self.tree[node] = self.tree[2*node + 1] + self.tree[2*node + 2]
+			
 	
 	def update1(self, start, end, l, r, main, val, node = 0):
 
